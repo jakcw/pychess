@@ -45,6 +45,7 @@ class Board:
     # to the console will not display it in chess board format
     def display_board(self):
         for piece in self.pieces:
+            pass
             
 
 board = Board()
