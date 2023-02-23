@@ -1,25 +1,21 @@
 class Position:
-    def __init__(self, rank, file):
-        # rank = x
-        # file = y
-        
-        self.rank = rank
-        self.file = file
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
         
     
     def __add__(self, other):
-        return Position(self.rank + other.rank, self.file + other.file)
+        return Position(self.x + other.x, self.y + other.y)
 
     def __sub__ (self, other):
-        return Position(self.rank - other.rank, self.file - other.file)
+        return Position(self.x - other.x, self.y - other.y)
 
     def __repr__(self):
-        return f"{self.rank, self.file}"
+        return f"{self.x, self.y}"
 
+    # dunder method to compare positions of two pieces
     def __eq__(self, other): 
             if not isinstance(other, Position):
-                # don't attempt to compare against unrelated types
                 return NotImplemented
-
-            return self.rank == other.rank and self.file == other.file
+            return self.x == other.x and self.y == other.y
 
