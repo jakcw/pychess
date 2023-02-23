@@ -1,7 +1,6 @@
 from position import Position as P
 
 class Pawn:
-
     # hopefully use unicode for pieces at some point, so each init will have a default symbol
     def __init__(self, side: str, symbol: str, position):
         self.symbol = symbol
@@ -14,7 +13,6 @@ class Pawn:
 
     def legal_move(self):
         pass
-
 
 
 class King:
