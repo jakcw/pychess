@@ -9,11 +9,14 @@ from position import Position as P
 class Board:
     def __init__(self):
 
+        self.board = [['0' for x in range(8)] for y in range(8)]
         self.pieces = []
 
-        for x in range(7):
-            self.pieces.append(Pawn('w', 'p', P(x, 1)))
-            self.pieces.append(Pawn('b', 'p', P(x, 6)))
+        # this way each piece in the board array contains position information rather than just an array index
+        for x in range(8):
+            self.board[1][x] = Pawn('b', 'p', P(x, 1))
+            self.board[6][x] = Pawn('b', 'p', P(x, 6))
+            
 
 
         # rather than appending each piece we can just extend the array
@@ -40,13 +43,8 @@ class Board:
                     Knight('b', 'n',  P(6, 7)),
                     Rook('b', 'r',  P(7, 7)),
                 ])
-                 
-    # currently, each piece is just sitting in the pieces array with information on its position; outputting it
-    # to the console will not display it in chess board format
-    def display_board(self):
-        for piece in self.pieces:
-            pass
-            
+
+
+
 
 board = Board()
-board.display_board()
