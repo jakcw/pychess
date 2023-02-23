@@ -17,6 +17,4 @@ class Board:
 
 
 
-board = Board()
-print(board)
                     
