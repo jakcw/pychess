@@ -18,4 +18,4 @@ class Position:
             if not isinstance(other, Position):
                 return NotImplemented
             return self.x == other.x and self.y == other.y
-
+    
